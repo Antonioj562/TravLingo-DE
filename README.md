@@ -32,6 +32,7 @@ Here's a walkthrough of implemented required features:
 
 <img src='https://imgur.com/a/7m5PcIp' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+https://imgur.com/a/7m5PcIp
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
 LICEcap
