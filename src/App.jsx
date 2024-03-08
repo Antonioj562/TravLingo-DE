@@ -5,7 +5,8 @@ import FlashCard from './components/FlashCard'
 import flag from './assets/flagAmerGer.png'
 // check if active == true or false to display german or enlish. on click changes active 
 const App = () => {
-  const [count, setCount] =useState(0)
+  const [count, setCount] =useState(0);
+  const [prev, setPrev] = useState(0);
   const travelPhrases = [
     ["Good morning", "Guten Morgen", "#00A676"],
     ["Good day", "Guten Tag", "#00A676"],
@@ -36,27 +37,13 @@ const App = () => {
     ["I've lost my way; could you please direct me to the nearest landmark?", "Ich habe mich verlaufen; Könnten Sie mich bitte zum nächsten Wahrzeichen führen?", "#FC3936"]
   ];
   const handlePrevClick = () => {
-    if (count > 0) {
-      setCount(count -1);
-    }
-    if (count == 0){
-      setCount(travelPhrases.length-1)
-    }
+    setCount(prev);
   };
 
   const handleNextClick = () => {
-    if (count < travelPhrases.length-1){
-      setCount(count +1);
-    }
-    if(count == travelPhrases.length-1){
-      setCount(0);
-    }
-  };
-
-  const handleRandomClick = () => {
     setCount(getRandomNumber());
+    setPrev(count);
   };
-
   function getRandomNumber() { 
     const randomNumber = Math.floor( Math.random() * 26 ) + 1; 
     return randomNumber; 
@@ -72,7 +59,7 @@ const App = () => {
           <h2>Quick flash cards for traveling phrases for Germany!</h2>
           <h4>Number of phrases: 27</h4>
           <h4>Click the card below to view translations.</h4>
-          <h4>Tip: {count + 1}</h4>
+          <h4>Phrase: {count + 1}</h4>
         </div>
 
         <FlashCard 
@@ -87,7 +74,6 @@ const App = () => {
           <button className='nextBtn'  onClick={handlePrevClick}>{'< Prev'}</button>
           <button className='nextBtn'  onClick={handleNextClick}>{'Next > '}</button>
         </div>
-        <button className='nextBtn' onClick={handleRandomClick}>Random Phrase</button>
       </div>
   )
 }
