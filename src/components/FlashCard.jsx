@@ -18,7 +18,10 @@ const FlashCard = (props) => {
     }
 
     return (
-        <button className='cardContainer' style={{ backgroundColor: colorDifficulty}} onClick={handleDivClick}>
+        <button className='cardContainer' 
+        style={{ backgroundColor: colorDifficulty}} 
+        onClick={handleDivClick}
+            >
             {cardFlip==true ? (
                     <>
                         <img className='flagImg' src={flagGerman} alt="German Flag" width={100}/>
