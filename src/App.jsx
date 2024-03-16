@@ -8,6 +8,7 @@ const App = () => {
   const [prev, setPrev] = useState(0);
   const [value, setValue] = useState('');
   const [guessResult, setGuessResult] = useState('');
+  const [streak, setStreak] = useState(0);
 
   let temp1 = [];
   let temp2 = [];
@@ -72,8 +73,10 @@ const handleSubmitGuess = () => {
   const germanText = travelPhrases[count][1];
   if(value.trim().toLowerCase() === germanText.toLowerCase()) {
     setGuessResult('Correct!');
+    setStreak(streak+1);
   } else {
     setGuessResult('Incorrect!');
+    setStreak(0);
   }
 }
 
@@ -99,6 +102,7 @@ function handleShuffle (){
           <h4>Number of phrases: 27</h4>
           <h4>Click the card below to view translations.</h4>
           <h4>Phrase: {count + 1}</h4>
+          <h4>Streak: {streak}</h4>
         </div>
 
         <FlashCard 

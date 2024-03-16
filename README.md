@@ -2,9 +2,9 @@
 
 Submitted by: **Antonio Loyola**
 
-This web app: **Flash cards with English and German translations. Cycle through the phrases to practice your English to German translations. Cards colored based on difficulty of sentence. A shuffle button is implenmented using the fisher-yates algorithm. With this algorithm we are able to randomly shuffle the cards in the array**
+This web app: **Flash cards with English and German translations. Cycle through the phrases to practice your English to German translations. Cards colored based on difficulty of sentence. A shuffle button is implenmented using the fisher-yates shuffle. With this algorithm we are able to randomly shuffle the cards in the array**
 
-Time spent: **3** hours spent in total
+Time spent: **8** hours spent in total
 
 ## Required Features
 
@@ -19,7 +19,7 @@ The following **optional** features are implemented:
 
 - [X] A shuffle button is used to randomize the order of the cards
 - [ ] A user's answer may be counted as correct even when it is slightly different from the target answer
-- [ ] A counter displays the user's current and longest streak of correct responses
+- [X] A counter displays the user's current and longest streak of correct responses
 - [ ] A user can mark a card that they have mastered and have it removed from the pool of answers as well as added to a list of mastered cards
 
 The following **additional** features are implemented:
@@ -30,23 +30,22 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://imgur.com/a/qOiIzl6.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+https://imgur.com/a/qOiIzl6
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+- LICEcap
 
 ## Notes
 
 Describe any challenges encountered while building the app.
 
-Learning the Fisher-Yates alogirthm to create a random array to shuffle the cards.
+Learning the Fisher-Yates shuffle to create a random array to shuffle the cards.
  Learned the most effective way is use the two pointer method and swap the last index of the array and decremenet.
- With this we have a O(N) time complexity and O(1) space complexitity. Unfortunatly in the end I had to 
- create a new object with `const shuffledPhrases = [...travelPhrases];` thus increasing my space complexity but solving my issue on shuffling the cards.
+ With that method we have a O(N) time complexity and O(1) space complexitity. Unfortunatly in the end I had to create a new object with `const shuffledPhrases = [...travelPhrases];`
+ thus increasing my space complexity but solving my issue on shuffling the cards.
 
 ## License
 
